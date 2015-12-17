@@ -22,3 +22,8 @@ def get_genome_length(genome_path):
     with open( genome_path, "r" ) as genome_file:
         next( genome_file ) # Skip header
         return sum( len( line.strip( ) ) for line in genome_file )
+
+def get_genome_sequence(genome_path):
+    with open( genome_path, "r" ) as genome_file:
+        next( genome_file ) # Skip header
+        return "".join([line.strip() for line in genome_file])
